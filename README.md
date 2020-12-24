@@ -1,0 +1,7 @@
+# RandomKey
+
+## Starting
+
+```
+expo start
+```
