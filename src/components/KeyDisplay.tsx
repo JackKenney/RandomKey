@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, 
+  TextStyle, 
+  View 
+} from 'react-native';
 
 export const LEFT_SIZE = 7
 export const RIGHT_SIZE = 3
@@ -7,6 +12,7 @@ export const RIGHT_SIZE = 3
 export interface Props {
     leftDigit: number,
     rightDigit: number,
+    textStyle: TextStyle,
 }
 
 class KeyDisplay extends Component<Props> {
@@ -16,13 +22,14 @@ class KeyDisplay extends Component<Props> {
     };
 
     render() {
+
         return (
           <View style={styles.container}>
-              <View style={[styles.digitContainer, styles.leftDigit]}>
-                  <Text style={styles.text}>{this.state.leftDigits[this.props.leftDigit]} </Text>
+              <View style={styles.leftDigit}>
+                  <Text style={this.props.textStyle}>{this.state.leftDigits[this.props.leftDigit]}</Text>
               </View>
-              <View style={[styles.digitContainer, styles.rightDigit]}>
-                <Text style={styles.text}>{this.state.rightDigits[this.props.rightDigit]}</Text>
+              <View style={styles.rightDigit}>
+                <Text style={this.props.textStyle}>{this.state.rightDigits[this.props.rightDigit]}</Text>
               </View>
           </View>
         );
@@ -31,7 +38,7 @@ class KeyDisplay extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    alignItems: 'flex-end',
     backgroundColor: '#000',
     flex: 1,
     flexDirection: 'row',
@@ -43,14 +50,6 @@ const styles = StyleSheet.create({
   rightDigit: {
     alignItems: "flex-start",
   },
-  digitContainer: {
-    color: '#fff',
-    flex:0.5,
-  },
-  text: {
-    color: '#fff',
-    fontSize: 100,
-  }
 });
 
 export default KeyDisplay
