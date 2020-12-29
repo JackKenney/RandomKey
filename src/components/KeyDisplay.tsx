@@ -22,14 +22,20 @@ class KeyDisplay extends Component<Props> {
     };
 
     render() {
-
         return (
           <View style={styles.container}>
               <View style={styles.leftDigit}>
-                  <Text style={this.props.textStyle}>{this.state.leftDigits[this.props.leftDigit]}</Text>
+                  <Text
+                  style={this.props.textStyle}>
+                    {this.state.leftDigits[this.props.leftDigit]}
+                  </Text>
               </View>
-              <View style={styles.rightDigit}>
-                <Text style={this.props.textStyle}>{this.state.rightDigits[this.props.rightDigit]}</Text>
+              <View 
+              style={styles.rightDigit}>
+                <Text
+                style={this.props.textStyle}>
+                  {this.state.rightDigits[this.props.rightDigit]}
+                </Text>
               </View>
           </View>
         );
@@ -38,11 +44,12 @@ class KeyDisplay extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'flex-end',
+    alignItems: 'center',
     backgroundColor: '#000',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
+    userSelect: "none", // web version only, ignored by RN
   },
   leftDigit: {
     alignItems: "flex-end",
