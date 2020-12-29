@@ -18,7 +18,7 @@ export interface Props {
 class KeyDisplay extends Component<Props> {
     state = {
         leftDigits: ["A", "B", "C", "D", "E", "F", "G"],
-        rightDigits: ["\u266D", "\u266E", "\u266F"],
+        rightDigits: ["\u266D", "", "\u266F"],
     };
 
     render() {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
-    userSelect: "none", // web version only, ignored by RN
+    // userSelect: "none", // web version only, ignored by RN
   },
   leftDigit: {
     alignItems: "flex-end",

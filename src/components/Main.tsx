@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
-import { Button } from 'react-native-elements';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import KeyDisplay, { LEFT_SIZE, RIGHT_SIZE } from './KeyDisplay';
 
 
