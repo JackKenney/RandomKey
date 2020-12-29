@@ -4,11 +4,23 @@
   "expo": {
     "name": "RandomKey",
     "slug": "RandomKey",
-    "version": "1.0.0",
+    "description": "MVP for simple app",
+    "githubUrl": "https://github.com/jackkenney/RandomKey",
+    "version": "1.0.4",
     "assetBundlePatterns": [
       "**/*"
     ],
-    "description": "MVP for simple app",
-    "githubUrl": "https://github.com/jackkenney/RandomKey"
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
   }
 }
